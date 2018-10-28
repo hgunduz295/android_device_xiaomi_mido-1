@@ -22,19 +22,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
 # Inherit some common Syberia stuff.
-$(call inherit-product, vendor/syberia/common.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
 #Boot Animation res
-TARGET_BOOT_ANIMATION_RES := 1080
+#TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := syberia_mido
+PRODUCT_NAME := superior_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
+
+# Superior
+export SUPERIOR_OFFICIAL=true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
