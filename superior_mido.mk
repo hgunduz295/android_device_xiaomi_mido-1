@@ -24,9 +24,6 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 # Inherit some common Syberia stuff.
 $(call inherit-product, vendor/superior/config/common.mk)
 
-#Boot Animation res
-#TARGET_BOOT_ANIMATION_RES := 1080
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := superior_mido
@@ -36,8 +33,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
 
-# Superior
+# Superior configs
 export SUPERIOR_OFFICIAL=true
+TARGET_GAPPS_ARCH := arm64
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -46,6 +44,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-keys"
-
-# Build Type
-SYBERIA_BUILD_TYPE := OFFICIAL
